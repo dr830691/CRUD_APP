@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './Components/NavBar.jsx';
-import CodeForInterview  from './Components/CodeForInterview.jsx';
+import HomePage  from './Components/HomePage.jsx';
 import AllUsers from './Components/AllUsers.jsx';
 import AllUser from './Components/AddUser.jsx';
 import AddUser from './Components/AddUser.jsx';
@@ -15,15 +15,12 @@ function App() {
 <>
   <BrowserRouter>
     <NavBar />
-    <switch>
-    <Route  exact path="/"component={CodeForInterview}/>
-    
-    <Route  exact path="/all"component={AllUsers}/>
-    
-    <Route  exact path="/add"component={AddUser}/>
-     <Route  component={NotFound}/>
-     
-     </switch>
+    <Switch>
+    <Route  exact path="/"    component={HomePage}/>
+    <Route  exact path="/all" component={AllUsers}/>
+    <Route  exact path="/add" component={AddUser}/>
+    <Route   component={NotFound} />
+    </Switch>
     </BrowserRouter>
 </>
   );
