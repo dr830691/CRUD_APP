@@ -1,26 +1,49 @@
 import {getUsers} from "../Services/api";
 import { useEffect, useState } from "react";
-import { Table, TableCell, TableRow,TableHead,TableBody } from "@material-ui/core";
+import { Table, TableCell, TableRow,TableHead,TableBody,makeStyles } from "@material-ui/core";
+
+const useStyle= makeStyles(
+    { table:{
+        width:"90%",
+        margin:"50px 0 0 50px",
+    },
+    thead:{
+        '& > *' :{
+            background:"black",
+             color:"white",
+             fontSize:20,
+        }
+        
+    },
+    row:{
+        '& > *' :{
+            fontSize:20,
+        }
+    }
+
+    
+
+    })
 
 
 const AllUsers= () =>{
      
-    const [users,setUsers] =useState();
+    const [users,setUsers]=useState([]);
+    const classes=useStyle();
     useEffect( ()=>{
             getAllUsers();
-    },[])
+    },[]);
     const getAllUsers = async() =>{
-    const response =await getUsers();
-    console.log(response.data);
+    let response =await getUsers();
+    console.log(response);
     setUsers(response.data);
-    console.log(users);console.log(1);
-    // console.log(users);console.log(2);
+    console.log(users);
     } 
     return (
     
-        <Table>
+        <Table className={classes.table}>
             <TableHead>
-                <TableRow>
+                <TableRow className={classes.thead}>
                     <TableCell>Id</TableCell>
                     <TableCell>Name</TableCell>
                     <TableCell>UserName</TableCell>
@@ -28,19 +51,24 @@ const AllUsers= () =>{
                     <TableCell>Phone</TableCell>
                 </TableRow>
             </TableHead>
-
             <TableBody>
-                { users.map((user)=>{
-                        <TableRow>
-                            <TableCell> {user.id} </TableCell>
-                            <TableCell> {user.name} </TableCell>
-                            <TableCell> {user.username} </TableCell>
-                            <TableCell> {user.email} </TableCell>
-                            <TableCell> {user.phone} </TableCell>
-                        </TableRow>
-                        } )
-                    }
+                {   users.map(
+                    (user) =>(
+                        <TableRow className={classes.row}>
+                        <TableCell>{user.id}</TableCell>
+                        <TableCell>{user.name}</TableCell>
+                        <TableCell>{user.username}</TableCell>
+                        <TableCell>{user.email}</TableCell>
+                        <TableCell>{user.phone}</TableCell>
+                        
+                    </TableRow>
+                    )
+                )
+                 
+                    
+                }
             </TableBody>
+            
         </Table>
         
         

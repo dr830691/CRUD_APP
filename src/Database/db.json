@@ -1,9 +1,20 @@
 {
-    "users":{
-        "name":"Rohit Sharma",
-        "username":"Hitman",
-        "email":"rohitsharma@gmail.com",
-        "phone":"1234567890",
-        "id": 1
+  "users": [
+    {
+      "name": "Rohit Sharma",
+      "username": "Hitman",
+      "email": "rohitsharma@gmail.com",
+      "phone": "1234567890",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
     }
+  ]
 }
