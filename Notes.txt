@@ -1,0 +1,3 @@
+1. useHistory () from "react-router" package provide a function "push(pass the url where you want to redirect)" function
+2.Spread operator (...arry_name Or object_name) Spread the values one by one 
+3.Useparams is in react-router-Dom and check the parameter in Url

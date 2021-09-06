@@ -8,13 +8,18 @@
       "id": 1
     },
     {
+      "name": "RAVINDAR SINGH RATHAUR",
+      "username": "Ravindar123",
+      "email": "ravindarsinghrathaur@gmail.com",
+      "phone": "08368272554",
       "id": 2
     },
     {
+      "name": "KL Rahul",
+      "username": "Rahuljing",
+      "email": "rahul@gmail.com",
+      "phone": "123455",
       "id": 3
-    },
-    {
-      "id": 4
     }
   ]
 }

@@ -1,8 +1,9 @@
 import { FormGroup,FormControl, Input, InputLabel, Button, Typography } from "@material-ui/core";
 import {  makeStyles} from "@material-ui/styles";
-import { useState } from "react";
-import { addUser } from "../Services/api";
-import { useHistory } from "react-router";
+import { useEffect, useState } from "react";
+import { editUser, getUsers } from "../Services/api";
+import { useHistory ,useParams} from "react-router";
+
 const useStyle =makeStyles (
     {
         container:{
@@ -21,27 +22,35 @@ const useStyle =makeStyles (
         phone:""
     };
 
-const AddUser =() =>{
+const EditUser =() =>{
     
     const [user,setUser] =useState(initialValue);
     const {name,username,email,phone} =user;
+    const {id} =useParams();
     const classes = useStyle();
     const history =useHistory();
+    useEffect( ()=>{
+        loadUserData();
+    },[]);
+    const loadUserData = async()=>{
+        const response=await getUsers(id);
+        setUser(response.data);
+    }
     const onValueChange= (e)=>{
         console.log(e.target.value);// Check Value is inserted or not
         setUser({...user,[e.target.name]:e.target.value})// spread operator
         console.log(user);
     }
 
-    const addUserDetails = async() =>{
-           await addUser(user);
+    const editUserDetails = async() =>{
+           await editUser(user,id);
            history.push('./all');
     }
     
     return (
         <FormGroup className={classes.container}>
             <Typography variant="h4">
-                Add User
+                Edit User
             </Typography>
             <FormControl>
                 <InputLabel> Name:</InputLabel>
@@ -63,10 +72,10 @@ const AddUser =() =>{
                 <Input onChange= {(e)=>onValueChange(e)}  name="phone" value={phone}/>
                    
             </FormControl>
-            <Button variant="contained" onClick={()=>addUserDetails()} color="primary">Add User</Button>
+            <Button variant="contained" onClick={()=>editUserDetails()} color="primary">Edit User</Button>
         </FormGroup>
     )
 }
 
 
-export default AddUser;
+export default EditUser;
