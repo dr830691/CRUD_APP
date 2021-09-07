@@ -43,8 +43,8 @@ const EditUser =() =>{
     }
 
     const editUserDetails = async() =>{
-           await editUser(user,id);
-           history.push('./all');
+           const response=await editUser(id,user);
+           history.push('../all');
     }
     
     return (
@@ -72,7 +72,7 @@ const EditUser =() =>{
                 <Input onChange= {(e)=>onValueChange(e)}  name="phone" value={phone}/>
                    
             </FormControl>
-            <Button variant="contained" onClick={()=>editUserDetails()} color="primary">Edit User</Button>
+            <Button variant="contained" onClick={()=>editUserDetails()} color="primary" >Edit User</Button>
         </FormGroup>
     )
 }

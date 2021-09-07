@@ -3,23 +3,23 @@
     {
       "name": "Rohit Sharma",
       "username": "Hitman",
-      "email": "rohitsharma@gmail.com",
+      "email": "rohitsharma1@gmail.com",
       "phone": "1234567890",
       "id": 1
     },
     {
-      "name": "RAVINDAR SINGH RATHAUR",
-      "username": "Ravindar123",
-      "email": "ravindarsinghrathaur@gmail.com",
-      "phone": "08368272554",
-      "id": 2
-    },
-    {
       "name": "KL Rahul",
       "username": "Rahuljing",
-      "email": "rahul@gmail.com",
+      "email": "rahul1@gmail.com",
       "phone": "123455",
       "id": 3
+    },
+    {
+      "name": "Jaspreet Bumra",
+      "username": "jspB",
+      "email": "jaspreet25@icc.com",
+      "phone": "9239408272554",
+      "id": 4
     }
   ]
 }
