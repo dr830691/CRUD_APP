@@ -23,6 +23,7 @@ export const addUser= async(request,response)=>{
         try{
                 await  newUser.save();
                 response.json(newUser);
+                // response.json("user Added Succesfully ");
         }
         catch{
                 response.json({Message: error.message});
@@ -34,6 +35,7 @@ export const getUserById= async(request,response)=>{
          try{
                 const user= await user_model.findById(id);
                 response.json(user);
+                // response.json("user find Succesfully ");
         }
         catch{
                 response.json({message:error.message});
@@ -47,18 +49,20 @@ export const editUser= async(request,response)=>{
        try {
             await user_model.updateOne({_id:request.params.id},editUser);
             response.json(editUser);
+        //     response.json("user Edited Succesfully ");
+            
         }
         catch{
                    response.json({message:message.error});
         }
 }
-// export const deleteUser = async (request,response) =>{
+export const deleteUser = async (request,response) =>{
 
-//         try{
-//                 await user_model.deleteOne({_id: response.params.id});
-//                  response.json("user Deleted Succesfully ");
-//         }
-//         catch(error){
-//                 response.json({message: error.message});
-//         }
-// }
+        try{
+                await user_model.deleteOne({_id: request.params.id});
+                 response.json("user Deleted Succesfully ");
+        }
+        catch(error){
+                response.json({message: error.message});
+        }
+}
