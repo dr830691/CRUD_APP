@@ -24,7 +24,7 @@ const useStyle= makeStyles({
 const HomePage = ()=>{
     const classes =useStyle();
     return(
-        <>
+        <div>
         <Box  className={classes.Component}>
           <Typography variant='h3'> Crud Home Page </Typography>
         </Box>
@@ -32,8 +32,9 @@ const HomePage = ()=>{
         <img  className={classes.image} src={Home1} alt="Home1"/>
         <img className={classes.image} src={Home2} alt="Home1"/>
         <img className={classes.image} src={Home3} alt="Home1"/>
-        </Box>
-        </>
+         </Box>
+         </div>
+        
     )
     
 }

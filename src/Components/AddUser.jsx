@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { FormGroup,FormControl, Input, InputLabel, Button, Typography } from "@material-ui/core";
 import {  makeStyles} from "@material-ui/styles";
 import { useState } from "react";
@@ -39,6 +40,7 @@ const AddUser =() =>{
     }
     
     return (
+        <div>
         <FormGroup className={classes.container}>
             <Typography variant="h4">
                 Add User
@@ -65,6 +67,7 @@ const AddUser =() =>{
             </FormControl>
             <Button variant="contained" onClick={()=>addUserDetails()} color="primary">Add User</Button>
         </FormGroup>
+        </div>
     )
 }
 

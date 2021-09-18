@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar.jsx';
 import HomePage  from './Components/HomePage.jsx';
@@ -13,8 +13,8 @@ import EditUser from './Components/EditUser';
 
 function App() {
   return (
-<>
-  <BrowserRouter>
+    <div>
+    <BrowserRouter>
     <NavBar />
     <Switch>
     <Route  exact path="/"    component={HomePage}/>
@@ -22,10 +22,9 @@ function App() {
     <Route  exact path="/add" component={AddUser}/>
     <Route exact path ="/edit/:id" component={EditUser} />
     <Route   component={NotFound} />
-    
     </Switch>
     </BrowserRouter>
-</>
+    </div>
   );
 }
 

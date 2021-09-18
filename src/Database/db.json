@@ -2,15 +2,15 @@
   "users": [
     {
       "name": "Rohit Sharma",
-      "username": "Hitman",
+      "username": "hitman1",
       "email": "rohitsharma1@gmail.com",
       "phone": "1234567890",
       "id": 1
     },
     {
       "name": "KL Rahul",
-      "username": "Rahuljing",
-      "email": "rahul1@gmail.com",
+      "username": "rahul2",
+      "email": "rahul2@gmail.com",
       "phone": "123455",
       "id": 3
     },
@@ -20,6 +20,20 @@
       "email": "jaspreet25@icc.com",
       "phone": "9239408272554",
       "id": 4
+    },
+    {
+      "name": "MS Dhoni",
+      "username": "msd7",
+      "email": "msdoni7@icc.com",
+      "phone": "7845324548",
+      "id": 5
+    },
+    {
+      "name": "RAVINDAR SINGH RATHAUR",
+      "username": "1236",
+      "email": "ravindarsinghrathaur@gmail.com",
+      "phone": "08368272554",
+      "id": 6
     }
   ]
 }
