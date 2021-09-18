@@ -1,0 +1,9 @@
+1.npm init now enter enter enter
+2.npm install express
+3. add ["type":"module",] to package.json file command below "main" to use "import package from pakagename"
+othewise use traditional way like as const express=require("express)
+4.Add ["start":"node index.js"] to use "npm start" Commaed
+otherwise use "node file_name"
+5.For Auto run when changed "npm install nodemon"
+6.Again update package.json Add ["start":"nodemon index.js"] to use "npm start" Command
+7.[npm install mongoose]
